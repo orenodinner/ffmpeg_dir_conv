@@ -38,7 +38,7 @@ for i, Zfile in enumerate( tqdm(fild_all_files(fld))):
             with open(py_file + ".cmd", mode='w') as f:
                 f.write("cd /d %~dp0" + "\n")
                 f.write("ffmpeg -i " + dos_file +" -c:v libx265 -c:a copy "+ "F:\VP9\\" + ffmpeg_name +".mp4"+"\n")
-                f.write("del /q " + dos_file +"\n" )
+                f.write("del /q /f " + dos_file +"\n" )
                 f.write("cd\n")
                 f.write("pause\n")
             cpu_percent = psutil.cpu_percent(interval=20)
