@@ -50,3 +50,4 @@ for i, Zfile in enumerate( tqdm(fild_all_files(fld))):
             print("next")
 
         print(dos_file)
+print("FINISH")
